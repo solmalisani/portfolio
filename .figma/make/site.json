@@ -1,7 +1,9 @@
 {
-  "title": "Sol Malisani",
+  "title": "Sol M.",
   "description": "Fashion portfolio",
-  "favicon": "/images/favicon-32x32.png",
+  "icons": {
+    "icon": "/images/favicon-32x32.png"
+  },
   "robots": {
     "index": false
   },
