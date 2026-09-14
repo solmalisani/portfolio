@@ -374,7 +374,7 @@ export default function App() {
               <img
                 src="/images/Foto.jpg"
                 alt="Sol Malisani, fashion designer"
-                className="w-full object-cover"
+                // className="w-full object-cover"
                 style={{ height: "420px", filter: "grayscale(20%)" }}
               />
             </div>
@@ -520,7 +520,7 @@ export default function App() {
                   className="text-xs tracking-widest uppercase mb-4"
                   style={{ color: "var(--muted-foreground)" }}
                 >
-                  Elsewhere
+                  Socials
                 </p>
                 <div className="flex gap-6">
                   {[
