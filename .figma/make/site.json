@@ -1,0 +1,10 @@
+{
+  "description": "Fashion portfolio",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
