@@ -371,7 +371,7 @@ export default function App() {
 
             <div>
               <img
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&h=700&fit=crop&auto=format"
+                src="/images/Foto.jpg"
                 alt="Sol Malisani, fashion designer"
                 className="w-full object-cover"
                 style={{ height: "420px", filter: "grayscale(20%)" }}
