@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Analytics } from "@vercel/analytics/next"
 
 const projects = [
   {
@@ -579,6 +580,7 @@ export default function App() {
           All rights reserved
         </span>
       </footer>
+      <Analytics />
     </div>
   )
 }
