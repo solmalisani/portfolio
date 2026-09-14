@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Analytics } from '@vercel/analytics/react';
 
 const projects = [
@@ -60,8 +60,36 @@ const skills = [
 ]
 
 export default function App() {
-  const [activeNav, setActiveNav] = useState("work")
+  const [activeNav, setActiveNav] = useState("")
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
+
+  useEffect(() => {
+    const sectionIds = ["work", "about", "contact"]
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveNav(entry.target.id)
+          }
+        })
+      },
+      {
+        // Triggers when a section crosses the upper half of the viewport
+        rootMargin: "-20% 0px -50% 0px",
+        threshold: 0,
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section))
+    }
+  }, [])
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
