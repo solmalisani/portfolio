@@ -10,14 +10,17 @@ export default function DemoOne() {
         <Nav />
       </header>
 
-      <main className="w-full h-full">
+      <main id="home" className="flex-1 flex items-center justify-center min-h-screen">
         <PhotoLoopSlider />
       </main>
 
       <section
         id="contact"
-        className="py-12"
-        style={{ borderTop: "1px solid var(--border)" }}
+        className="min-h-screen w-full flex flex-col justify-center items-center px-8 pt-24 pb-16 relative z-10"
+        style={{
+          backgroundColor: "var(--background)",
+          borderTop: "1px solid var(--border)"
+        }}
       >
         <ContactForm />
       </section>

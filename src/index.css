@@ -26,16 +26,16 @@
   --foreground: #f0ece4;
   --card: #161616;
   --card-foreground: #f0ece4;
-  --primary: #e8ff00;
+  --primary: #ffffff;
   --primary-foreground: #0e0e0e;
   --secondary: #1c1c1c;
   --secondary-foreground: #f0ece4;
   --muted: #222222;
   --muted-foreground: #888880;
-  --accent: #e8ff00;
+  --accent: #ffffff;
   --accent-foreground: #0e0e0e;
   --border: #2a2a2a;
-  --ring: #e8ff00;
+  --ring: #ffffff;
   --radius: 0px;
 }
 
