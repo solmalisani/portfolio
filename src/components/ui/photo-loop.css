@@ -1,0 +1,132 @@
+.parallax-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  color: #000; /* Text inside the white card */
+  user-select: none;
+}
+
+.project-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* Floating Card Preview (Minimap) */
+.parallax-container .minimap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  z-index: 50;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-container .minimap-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.parallax-container .minimap-info-list {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax-container .minimap-item-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.parallax-container .minimap-title {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  gap: 0.25rem;
+}
+
+.parallax-container .minimap-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.195em;
+  color: #918d8d;
+  margin-top: 0.4rem;
+}
+
+.parallax-container .minimap-description {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: #333333;
+  margin-top: 2em;
+  text-align: justify;
+}
+
+.parallax-container .minimap-img-preview {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.parallax-container .minimap-img-item {
+  position:absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: calc(100% - 3rem);
+  height: calc(300px - 3rem);
+  overflow: hidden;
+}
+
+.parallax-container .minimap-img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
