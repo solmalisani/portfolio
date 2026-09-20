@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 
 export default function ContactForm() {
+  const [isHeaderHovered, setIsHeaderHovered] = useState(false)
   // Replace "YOUR_FORM_ID" with your actual Formspree form ID (e.g. "xayvzwpo")
   const [state, handleSubmit] = useForm("mkjgjjkg")
 
@@ -21,14 +22,70 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="flex flex-col items-center text-sm w-full max-w-md my-auto"
     >
-      <h2
+      {/* <h2
         className="text-3xl md:text-5xl font-bold pb-2 text-center font-display tracking-tight"
         style={{ color: "var(--foreground)" }}
       >
         Let’s Get In Touch.
-      </h2>
+      </h2> */}
 
-      <p
+      {/* --- INICIO CABECERA "LET'S WORK TOGETHER" --- */}
+      <div
+        className="group relative cursor-default mb-8 w-full flex flex-col items-center"
+        onMouseEnter={() => setIsHeaderHovered(true)}
+        onMouseLeave={() => setIsHeaderHovered(false)}
+      >
+        <h2 className="relative text-center text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <span className="block overflow-hidden">
+            <span
+              className="block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              style={{
+                transform: isHeaderHovered ? "translateY(-8%)" : "translateY(0)", fontWeight: "800"
+              }}
+            >
+              Let's work
+            </span>
+          </span>
+          <span className="block overflow-hidden">
+            <span
+              className="block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75"
+              style={{
+                transform: isHeaderHovered ? "translateY(-8%)" : "translateY(0)", fontWeight: "800"
+              }}
+            >
+              <span style={{ color: "var(--muted-foreground)", opacity: 0.6 }}>
+                together.
+              </span>
+            </span>
+          </span>
+        </h2>
+
+        {/* Línea decorativa izquierda */}
+        <div className="absolute -left-4 sm:-left-12 top-1/2 -translate-y-1/2">
+          <div
+            className="h-px w-6 sm:w-10 transition-all duration-500"
+            style={{
+              backgroundColor: "var(--border)",
+              transform: isHeaderHovered ? "scaleX(1.5)" : "scaleX(1)",
+              opacity: isHeaderHovered ? 1 : 0.5,
+            }}
+          />
+        </div>
+
+        {/* Línea decorativa derecha */}
+        <div className="absolute -right-4 sm:-right-12 top-1/2 -translate-y-1/2">
+          <div
+            className="h-px w-6 sm:w-10 transition-all duration-500"
+            style={{
+              backgroundColor: "var(--border)",
+              transform: isHeaderHovered ? "scaleX(1.5)" : "scaleX(1)",
+              opacity: isHeaderHovered ? 1 : 0.5,
+            }}
+          />
+        </div>
+      </div>
+
+      {/* <p
         className="text-sm pb-8 text-center"
         style={{ color: "var(--muted-foreground)" }}
       >
@@ -40,7 +97,7 @@ export default function ContactForm() {
         >
           solmalisanidesign@gmail.com
         </a>
-      </p>
+      </p> */}
 
       <div className="w-full flex flex-col gap-4">
         {/* Full Name */}
@@ -148,6 +205,20 @@ export default function ContactForm() {
             />
           </svg>
         </button>
+
+        <p
+          className="text-sm pb-8 text-center"
+          style={{ color: "var(--muted-foreground)" }}
+        >
+        Or reach out directly at{" "}
+        <a
+          href="mailto:solmalisanidesign@gmail.com"
+          className="hover:underline font-medium transition-colors"
+          style={{ color: "var(--accent)" }}
+        >
+          solmalisanidesign@gmail.com
+        </a>
+      </p>
       </div>
     </form>
   )
