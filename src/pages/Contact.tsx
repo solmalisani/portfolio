@@ -7,7 +7,7 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-12 pt-20 max-w-md mx-auto">
+      <div className="flex flex-col items-center justify-center text-center py-12 pt-28 max-w-md mx-auto px-4">
         <h2 className="text-3xl font-bold font-display mb-2">Thank You!</h2>
         <p style={{ color: "var(--muted-foreground)" }}>
           Your message has been sent successfully. I’ll get back to you soon.
@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center text-sm w-full max-w-md mx-auto pt-12 sm:pt-16 pb-12 px-4"
+      className="flex flex-col items-center text-sm w-full max-w-md mx-auto pt-26 sm:pt-28 pb-12 px-4"
     >
       {/* --- HEADER "LET'S WORK TOGETHER" --- */}
       <div
