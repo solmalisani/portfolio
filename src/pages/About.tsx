@@ -20,30 +20,30 @@ export default function AboutSection() {
       <div className="relative z-10 h-full w-full min-h-screen pointer-events-none">
 
         {/* Block 1: Top Left */}
-        <div className="absolute top-[14%] left-6 sm:left-10 md:left-12 max-w-[220px] sm:max-w-[260px] text-left pointer-events-auto">
-          <p className="text-xs sm:text-sm md:text-base leading-relaxed font-light text-black">
+        <div className="absolute top-[12%] sm:top-[14%] left-4 sm:left-8 md:left-12 max-w-[42vw] sm:max-w-[240px] md:max-w-[260px] text-left pointer-events-auto">
+          <p className="text-[11px] xs:text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed font-light text-black">
             I’m Sol Malisani—an Amsterdam based fashion designer with experience across both haute couture and ready-to-wear.
           </p>
         </div>
 
-        {/* Block 2: Middle Left (Intercalated below Block 1) */}
-        <div className="absolute top-[48%] left-6 sm:left-10 md:left-12 max-w-[220px] sm:max-w-[260px] text-left pointer-events-auto">
-          <p className="text-xs sm:text-sm md:text-base leading-relaxed font-light text-black">
+        {/* Block 2: Middle Left (Intercalated) */}
+        <div className="absolute top-[52%] sm:top-[48%] left-4 sm:left-8 md:left-12 max-w-[42vw] sm:max-w-[240px] md:max-w-[260px] text-left pointer-events-auto">
+          <p className="text-[11px] xs:text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed font-light text-black">
             My practice begins on the body and ends at the seam: construction is never an afterthought.
           </p>
         </div>
 
-        {/* Block 3: Top-Right / Upper Middle (Intercalated between Left Blocks) */}
-        <div className="absolute top-[30%] right-6 sm:right-10 md:right-12 max-w-[220px] sm:max-w-[260px] text-left md:text-right pointer-events-auto">
-          <p className="text-xs sm:text-sm md:text-base leading-relaxed font-light text-black">
+        {/* Block 3: Top-Right / Upper Middle (Intercalated) */}
+        <div className="absolute top-[28%] sm:top-[30%] right-4 sm:right-8 md:right-12 max-w-[42vw] sm:max-w-[240px] md:max-w-[260px] text-left md:text-right pointer-events-auto">
+          <p className="text-[11px] xs:text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed font-light text-black">
             Trained in patternmaking, hand-pleating, and architectural draping, I combine hand skills with digital tools like Adobe Suite to take ideas from sketch to sample.
           </p>
         </div>
 
         {/* Block 4: Bottom Right */}
-        <div className="absolute bottom-[14%] right-6 sm:right-10 md:right-12 max-w-[220px] sm:max-w-[260px] text-left md:text-right pointer-events-auto">
-          <p className="text-xs sm:text-sm md:text-base leading-relaxed font-light text-black">
-            I’m currently based in Amsterdam, NL
+        <div className="absolute bottom-[10%] sm:bottom-[14%] right-4 sm:right-8 md:right-12 max-w-[42vw] sm:max-w-[240px] md:max-w-[260px] text-left md:text-right pointer-events-auto">
+          <p className="text-[11px] xs:text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed font-light text-black">
+            Currently based in Amsterdam, NL
           </p>
         </div>
 
