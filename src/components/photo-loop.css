@@ -117,7 +117,7 @@
 }
 
 .parallax-container .minimap-img-item {
-  position:absolute;
+  position: absolute;
   top: 1.5rem;
   right: 1.5rem;
   width: calc(100% - 3rem);
@@ -129,4 +129,55 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* --- MOBILE OPTIMIZATIONS --- */
+@media (max-width: 640px) {
+  /* 1. Shorter card height (230px instead of 280px) */
+  .parallax-container .minimap {
+    width: 86vw;
+    height: 220px;
+    transform: translate(-50%, -50%);
+    border-radius: px;
+  }
+
+  /* 2. Compact container padding to fit inside 230px height */
+  .parallax-container .minimap-item-info {
+    height: 220px;
+    padding: 1rem 0.75rem 1rem 1rem;
+  }
+
+  /* 3. Scaled typography for the shorter height */
+  .parallax-container .minimap-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+  }
+
+  .parallax-container .minimap-category {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  .parallax-container .minimap-description {
+    font-size: 0.68rem;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 4. Match image preview container height */
+  .parallax-container .minimap-img-preview {
+    padding: 0.75rem;
+  }
+
+  .parallax-container .minimap-img-item {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: calc(100% - 1.5rem);
+    height: calc(220px - 1.5rem);
+  }
 }

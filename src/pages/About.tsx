@@ -22,7 +22,7 @@ export default function AboutSection() {
         {/* Block 1: Top Left */}
         <div className="absolute top-[12%] sm:top-[14%] left-4 sm:left-8 md:left-12 max-w-[42vw] sm:max-w-[240px] md:max-w-[260px] text-left pointer-events-auto">
           <p className="text-[11px] xs:text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed font-light text-black">
-            I’m Sol Malisani—an Amsterdam based fashion designer with experience across both haute couture and ready-to-wear.
+            I’m Sol Malisani—an Argentinian fashion designer with experience across both haute couture and ready-to-wear.
           </p>
         </div>
 
