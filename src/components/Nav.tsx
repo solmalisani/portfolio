@@ -4,7 +4,7 @@ export default function Nav() {
   const location = useLocation()
 
   const navItems = [
-    { label: "work", path: "/" },
+    { label: "work", path: "/work" },
     { label: "about", path: "/about" },
     { label: "contact", path: "/contact" },
   ]
