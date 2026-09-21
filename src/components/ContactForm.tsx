@@ -207,8 +207,8 @@ export default function ContactForm() {
         </button>
 
         <p
-          className="text-sm pb-8 text-center"
-          style={{ color: "var(--muted-foreground)" }}
+            className="text-sm pb-8 text-center"
+            style={{ color: "var(--muted-foreground)" }}
         >
         Or reach out directly at{" "}
         <a
