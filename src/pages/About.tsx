@@ -13,10 +13,8 @@ export default function AboutSection() {
         borderTop: "1px solid var(--border)",
       }}
     >
-      {/* Background ASCII Art Video Component */}
       <Press className="absolute inset-0 h-full w-full pointer-events-none object-cover" />
 
-      {/* Content Layer with Intercalated Text Positions */}
       <div className="relative z-10 h-full w-full min-h-screen pointer-events-none">
 
         {/* Block 1: Top Left */}

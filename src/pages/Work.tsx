@@ -5,7 +5,6 @@ export default function WorkPage() {
   const [isHeaderHovered, setIsHeaderHovered] = useState(false)
 
   return (
-    // Changed pt-24 on mobile (to clear fixed navbar) and sm:pt-28 for desktop
     <div className="pt-20 sm:pt-28 pb-12">
       <div
         className="group relative cursor-default mb-6 w-full flex flex-col items-center text-center"

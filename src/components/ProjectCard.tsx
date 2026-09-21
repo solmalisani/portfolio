@@ -13,7 +13,6 @@ export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
   ({ className, imgSrc, title, description, link, linkText = "View Project", ...props }, ref) => {
-    // Safely normalize description to always be an array
     const descriptionParagraphs = Array.isArray(description)
       ? description
       : description
@@ -45,7 +44,6 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
             {title}
           </h3>
 
-          {/* Safely render paragraphs */}
           <div className="mt-3 flex-1 space-y-2">
             {descriptionParagraphs.map((paragraph, index) => (
               <p key={index} className="text-sm text-muted-foreground leading-relaxed">
@@ -54,7 +52,6 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
             ))}
           </div>
 
-          {/* Card Link/CTA */}
           <Link
             to={link}
             className="group/button mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary transition-all duration-300 hover:underline"

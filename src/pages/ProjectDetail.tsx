@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowLeft, X } from "lucide-react"
 import { cn } from "../lib/utils"
 
-// --- GALLERY TYPES & CONTEXT ---
 interface ImageData {
   id: string
   src: string
@@ -185,7 +184,6 @@ function GalleryModal() {
   )
 }
 
-// --- PROJECT DATA DICTIONARY ---
 const PROJECTS_DATA: Record<
   string,
   {
@@ -301,7 +299,6 @@ const PROJECTS_DATA: Record<
   },
 }
 
-// --- MAIN PAGE COMPONENT ---
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
 
@@ -372,6 +369,14 @@ export default function ProjectDetail() {
             />
           ))}
         </GalleryGrid>
+
+        <Link
+          to="/work"
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors mb-8"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to projects
+        </Link>
+
       </div>
     </Gallery>
   )

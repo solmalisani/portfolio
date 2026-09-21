@@ -69,7 +69,7 @@ const getProjectNumber = (index: number) => {
     .padStart(2, "0");
 };
 
-export function Component() {
+export function PhotoSlider() {
   const [visibleRange, setVisibleRange] = React.useState({
     min: -CONFIG.BUFFER_SIZE,
     max: CONFIG.BUFFER_SIZE,
