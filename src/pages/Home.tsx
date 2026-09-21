@@ -1,9 +1,9 @@
-import { Component as PhotoLoopSlider } from "@/components/photo-loop-infinite-slider"
+import { PhotoSlider } from "@/components/PhotoLoop"
 
 export default function Home() {
   return (
     <div className="flex-1 flex items-center justify-center min-h-screen w-full">
-      <PhotoLoopSlider />
+      <PhotoSlider />
     </div>
   )
 }
