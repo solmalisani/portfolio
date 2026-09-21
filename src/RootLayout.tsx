@@ -1,13 +1,30 @@
 import { Outlet, useLocation } from "react-router"
+import { useState, useEffect } from "react"
 import Nav from "@/components/Nav"
 import Footer from "@/components/Footer"
 import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout() {
   const location = useLocation()
+  const [isDesktop, setIsDesktop] = useState(false)
 
-  // Routes where the footer should be fixed at the bottom of the screen
-  const isFixedFooterRoute = location.pathname === "/" || location.pathname === "/about"
+  // Track viewport width (md breakpoint = 768px)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768)
+    }
+
+    // Set initial value
+    handleResize()
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  // Home: always fixed footer
+  // About: fixed ONLY on desktop, static flow on mobile
+  const isFixedFooter =
+    location.pathname === "/" || (location.pathname === "/about" && isDesktop)
 
   return (
     <div className="relative w-full min-h-screen flex flex-col justify-between">
@@ -21,10 +38,10 @@ export default function RootLayout() {
         <Outlet />
       </main>
 
-      {/* Footer conditionally switches between fixed position and natural flow */}
+      {/* Footer conditionally switches between fixed and relative based on route & screen size */}
       <footer
         className={
-          isFixedFooterRoute
+          isFixedFooter
             ? "fixed bottom-0 left-0 right-0 z-50 pointer-events-auto"
             : "w-full relative z-10"
         }
