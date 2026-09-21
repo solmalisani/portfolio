@@ -5,9 +5,10 @@ export default function WorkPage() {
   const [isHeaderHovered, setIsHeaderHovered] = useState(false)
 
   return (
-    <div className="sm:pt-20">
+    // Changed pt-24 on mobile (to clear fixed navbar) and sm:pt-28 for desktop
+    <div className="pt-20 sm:pt-28 pb-12">
       <div
-        className="group relative cursor-default mb-2 w-full flex flex-col items-center text-center"
+        className="group relative cursor-default mb-6 w-full flex flex-col items-center text-center"
         onMouseEnter={() => setIsHeaderHovered(true)}
         onMouseLeave={() => setIsHeaderHovered(false)}
       >
@@ -26,7 +27,8 @@ export default function WorkPage() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 p-8 pt-2 md:grid-cols-2 lg:grid-cols-3">
+      {/* Reduced padding from p-8 to px-4 pt-2 on mobile for better card width */}
+      <div className="grid grid-cols-1 gap-8 px-4 sm:px-8 pt-2 md:grid-cols-2 lg:grid-cols-3">
         <ProjectCard
           title="Iris Van Herpen"
           description="Constructed a custom Haute Couture dress for the Paris Couture Week 2026 runway, executing the entire production process from pattern making, machine sewing, and hand stitching."
